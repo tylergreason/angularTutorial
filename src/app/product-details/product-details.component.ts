@@ -25,17 +25,18 @@ addToCart(product) {
     
     
   }
+  buttonText = (product) => {
+    if (this.cartService.getItems().includes(this.product)){
+      return "Bought!"
+    }else{
+      return "Buy"
+    }
+  }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.product = products[+params.get('productId')]
     })
-    this.buttonText;
-    if (this.cartService.getItems().includes(this.product)){
-        return this.buttonText = "Bought!"
-    }else{
-        return this.buttonText = "Buy"
-    }
   }
 
 }
