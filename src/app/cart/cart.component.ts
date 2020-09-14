@@ -10,6 +10,7 @@ import { CartService } from '../cart.service'
 export class CartComponent implements OnInit {
   items; 
   checkoutForm;
+  total;
 
   constructor(
     private cartService: CartService,
@@ -21,10 +22,12 @@ export class CartComponent implements OnInit {
         })
   }
 
-  ngOnInit() {
-    this.items = this.cartService.getItems(); 
-
+    ngOnInit() {
+        this.items = this.cartService.getItems(); 
+        this.total = this.cartService.getCartTotal()
+        console.log(this.total)
     }
+
     onSubmit(customerData) {
         this.items = this.cartService.clearCart(); 
         this.checkoutForm.reset(); 

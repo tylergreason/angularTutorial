@@ -26,6 +26,14 @@ export class CartService {
   getShippingPrices(){
       return this.http.get('/assets/shipping.json')
   }
+
+  getCartTotal(){
+      return this.items.length > 0
+      ?
+      this.items.reduce((a,b) => a + b.price,0)
+      :
+      0
+  }
   constructor(
       private http: HttpClient,
   ) { }

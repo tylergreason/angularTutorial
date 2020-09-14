@@ -7,6 +7,11 @@
     <span>{{item.price | currency}}</span>
 </div>
 
+<div>
+    <label>Total:</label>
+    ${{total}}
+</div>
+
 <form 
     [formGroup]="checkoutForm"
     (ngSubmit)="onSubmit(checkoutForm.value)"
