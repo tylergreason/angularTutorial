@@ -23,6 +23,10 @@ export class CartService {
     return this.items; 
   }
 
+  getQuantity(product){
+      return this.items.filter(item => item === product).length
+  }
+
   getShippingPrices(){
       return this.http.get('/assets/shipping.json')
   }
@@ -34,6 +38,9 @@ export class CartService {
       :
       0
   }
+
+
+
   constructor(
       private http: HttpClient,
   ) { }

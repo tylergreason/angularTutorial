@@ -19,6 +19,10 @@
     (notify)="onNotify()"
     >
   </app-product-alerts>
+  <button (click)="addToCart(product)">
+      {{buyButtonText(product)}}
+  </button>
+  <span>{{getQuantity(product)}} In Cart</span>
 </div>
 
 <!-- 
