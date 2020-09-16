@@ -10,6 +10,10 @@ export class CartService {
 
   items = []; 
 
+  constructor(
+    private http: HttpClient,
+  ) { }
+
   addToCart(product){
     this.items.push(product); 
   }
@@ -38,11 +42,5 @@ export class CartService {
       :
       0
   }
-
-
-
-  constructor(
-      private http: HttpClient,
-  ) { }
 
 }

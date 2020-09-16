@@ -1,0 +1,13 @@
+@keyframes renderAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1; 
+    }
+}
+
+:host {
+    animation-name: renderAnimation; 
+    animation-duration: 0.2s;
+}

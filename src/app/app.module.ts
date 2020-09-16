@@ -12,6 +12,7 @@ import { CartService } from './cart.service';
 import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
+import { TestGenerateComponent } from './test-generate/test-generate.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -24,15 +25,16 @@ import { ShippingComponent } from './shipping/shipping.component';
       { path: 'cart', component: CartComponent},
     ])
   ],
-  declarations: [
+  declarations: [	
     AppComponent,
     TopBarComponent,
     ProductListComponent,
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
-    ShippingComponent
-  ],
+    ShippingComponent,
+      TestGenerateComponent
+   ],
   bootstrap: [ AppComponent ],
   providers: [CartService]
 })
