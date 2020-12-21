@@ -15,11 +15,19 @@ describe('ShippingComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ShippingComponent);
-    component = fixture.componentInstance;
+    component = new ShippingComponent(null);
+    // component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should have a component', () => {
+    console.log(component);
+
     expect(component).toBeTruthy();
-  });
+    expect(component).toBeFalsy();
+  })
+
+  // it('should create', () => {
+  //   expect(component).toBeTruthy();
+  // });
 });

@@ -22,7 +22,7 @@ addToCart(product) {
     window.alert('Your product has been added to the cart!');
   }
   
-  buttonText = (product) => {
+  buttonText(product) {
     if (this.cartService.getItems().includes(this.product)){
       return "Bought!"
     }else{

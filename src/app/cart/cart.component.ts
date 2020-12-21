@@ -24,10 +24,14 @@ export class CartComponent implements OnInit {
 
     ngOnInit() {
         this.items = this.cartService.getItems(); 
-        this.total = this.cartService.getCartTotal()
-        console.log(this.total)
-    }
+      this.total = this.cartService.getCartTotal()
+  }
 
+  removeFromCart(idx) {
+    this.cartService.removeFromCart(idx);
+    this.items = this.cartService.getItems(); 
+  }
+  
     onSubmit(customerData) {
         this.items = this.cartService.clearCart(); 
         this.checkoutForm.reset(); 

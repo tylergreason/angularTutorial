@@ -18,6 +18,10 @@ export class CartService {
     this.items.push(product); 
   }
 
+  removeFromCart(idx: number) {
+    this.items.splice(idx, 1);
+  }
+
   getItems(){
     return this.items;
   }
