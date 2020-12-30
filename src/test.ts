@@ -6,6 +6,7 @@ import {
     BrowserDynamicTestingModule,
     platformBrowserDynamicTesting
 } from '@angular/platform-browser-dynamic/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 declare const require: any;
 
