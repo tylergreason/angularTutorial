@@ -10,20 +10,41 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartService } from './cart.service';
 import { CartComponent } from './cart/cart.component';
-import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
+
+
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatSliderModule } from '@angular/material/slider';
+import { MaterialTableComponent } from './material-table/material-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MaterialTreeComponent } from './material-tree/material-tree.component';
+import { MatTreeModule } from '@angular/material/tree';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule, 
     ReactiveFormsModule,
+    MatSliderModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent},
       { path: 'shipping', component: ShippingComponent},
-      { path: 'cart', component: CartComponent},
-    ])
+      { path: 'cart', component: CartComponent }
+    ]),
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatTreeModule,
+    MatIconModule,
+    MatButtonModule
   ],
   declarations: [	
     AppComponent,
@@ -32,7 +53,9 @@ import { ShippingComponent } from './shipping/shipping.component';
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
-    ShippingComponent
+    ShippingComponent,
+    MaterialTableComponent,
+    MaterialTreeComponent
    ],
   bootstrap: [ AppComponent ],
   providers: [CartService, HttpClientModule]

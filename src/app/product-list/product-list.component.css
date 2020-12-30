@@ -1,7 +1,3 @@
-.thisClass {
-  /* background-color: red; */
-}
-
 :host {
     background-color: blue;
 }
